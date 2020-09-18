@@ -67,7 +67,18 @@
     </ui:InputDialog>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="OpenBrowser.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_city">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="city" />
+        </InArgument>
+        <InOutArgument x:TypeArguments="ui:Image" x:Key="inout_temprature">
+          <mva:VisualBasicReference x:TypeArguments="ui:Image" ExpressionText="temprature" />
+        </InOutArgument>
+        <InOutArgument x:TypeArguments="ui:Image" x:Key="inout_perceiption">
+          <mva:VisualBasicReference x:TypeArguments="ui:Image" ExpressionText="perceiption" />
+        </InOutArgument>
+        <InOutArgument x:TypeArguments="ui:Image" x:Key="inout_wind">
+          <mva:VisualBasicReference x:TypeArguments="ui:Image" ExpressionText="wind" />
+        </InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
